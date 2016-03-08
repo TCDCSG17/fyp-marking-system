@@ -12,4 +12,9 @@
  *
  *= require_tree .
  *= require_self
- */
+ *= require_bootstrap
+*/
+body{
+	background-color:#DDDDDD;
+	padding: 10px;
+}

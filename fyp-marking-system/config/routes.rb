@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'pages/home'
+  get 'marks/index', to: 'marks#index', as: 'marks'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
