@@ -7,9 +7,13 @@
   <fieldset>
     <legend>Exam paper information:</legend>
 
-    <p>Paper  <a href="https://www.scss.tcd.ie/assets/resources/1516%20Timetables/ICS/Year2_ICS_1516.pdf"><span style="color:blue">pdf</span></a></p>
-    Student No: 14311499<p>
+    <p>Exam
+      <a class="btn btn-link", a href="https://www.scss.tcd.ie/assets/resources/1516%20Timetables/ICS/Year2_ICS_1516.pdf">PDF</a>
+    </p>
+
+    <p>Student No: 14311499</p>
     <!--<input type="text" name="number" value="14311499">-->
+
     <br>Reader 1<br>	
     <select>
   		<option value="Clinton">Mr Clinton</option>
@@ -36,6 +40,6 @@
     <%= link_to "Correction", marks_path,class:"btn btn-xs btn-primary"%>
 
 	  <br><br>
-    <%= link_to "Return", marks_path,class:"btn btn-success"%>
+    <%= button_tag "Return", class:"btn btn-success"%>
   </div>
 </div>
