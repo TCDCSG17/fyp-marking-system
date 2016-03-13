@@ -8,8 +8,8 @@
     <legend>Exam paper information:</legend>
 
     <p>Paper <span style="color:blue">pdf</span></p>
-    Student No:<br>
-    <input type="text" name="number" value="14311499">
+    Student No: 14311499<p>
+    <!--<input type="text" name="number" value="14311499">-->
     <br>Reader 1<br>	
     <select>
   		<option value="Clinton">Mr Clinton</option>
@@ -17,6 +17,7 @@
   		<option value="Molloy">Mr Molloy</option>
   		<option value="Robinson">Mrs Robinson</option>
 	  </select>
+    <%= link_to "Correction", marks_path,class:"btn btn-xs btn-primary"%>
 	  <br>Reader 2<br>	
     <select>
   		<option value="Clinton">Mr Clinton</option>
@@ -24,6 +25,7 @@
   		<option value="Molloy">Mr Molloy</option>
   		<option value="Robinson">Mrs Robinson</option>
 	  </select>
+    <%= link_to "Correction", marks_path,class:"btn btn-xs btn-primary"%>
 	  <br>Reader 3<br>	
     <select>
   		<option value="Clinton">Mr Clinton</option>
@@ -31,8 +33,9 @@
   		<option value="Molloy">Mr Molloy</option>
   		<option value="Robinson">Mrs Robinson</option>
 	  </select>
+    <%= link_to "Correction", marks_path,class:"btn btn-xs btn-primary"%>
 
 	  <br><br>
-    <%= link_to "Submit", marks_path,class:"btn btn-success"%>
+    <%= link_to "Return", marks_path,class:"btn btn-success"%>
   </div>
 </div>
