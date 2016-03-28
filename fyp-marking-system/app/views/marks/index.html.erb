@@ -42,9 +42,9 @@
     var weight2 = Number($( "#weight2").val())/100;
     var weight3 = Number($( "#weight3").val())/100;
     var weight4 = Number($( "#weight4").val())/100;
-    var pct = "%";
     var res = (score1*weight1 + score2*weight2 + score3*weight3 + score4*weight4);
-    $("#out").text(res +"%");
+    var finalRes = parseFloat(Math.round(res* 100) / 100).toFixed(2);
+    $("#out").text(finalRes +"%");
   })
   .keyup();
 </script>
