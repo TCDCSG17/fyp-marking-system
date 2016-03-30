@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160330185214) do
+=======
+ActiveRecord::Schema.define(version: 20160330193820) do
+
+  create_table "marks", force: :cascade do |t|
+  end
+>>>>>>> 81b383226fecdd724c6db4876436af81e18190c3
 
   create_table "students", force: :cascade do |t|
     t.integer  "StudentNumber"
