@@ -2,8 +2,11 @@
 
 <h1>Listing Students</h1>
 
+<p> <%= link_to 'New Student', new_student_path %> </p>
+
 <table>
   <thead>
+    <table style="width:100%">
     <tr>
       <th>Student Number</th>
       <th>Project Title</th>
@@ -21,17 +24,16 @@
         <td><%= student.StudentNumber %></td>
         <td><%= student.ProjectTitle %></td>
         <td><%= student.ProjectTitle %></td>        
-        <td><%= student.Reader1 %></td>
-        <td><%= student.Reader2 %></td>
-        <td><%= student.Reader3 %></td>
+        <td><%= button_tag student.Reader1, class:"btn btn-xs btn-primary"%></td>
+        <td><%= button_tag student.Reader2, class:"btn btn-xs btn-primary" %></td>
+        <td><%= student.Reader3%></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+    </table>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Student', new_student_path %>
