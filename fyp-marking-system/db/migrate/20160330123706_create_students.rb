@@ -3,6 +3,7 @@ class CreateStudents < ActiveRecord::Migration
     create_table :students do |t|
       t.integer :StudentNumber
       t.text :ProjectTitle
+      t.pdf :document
       t.text :Reader1
       t.text :Reader2
       t.text :Reader3

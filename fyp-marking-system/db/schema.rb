@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20160330185214) do
   create_table "students", force: :cascade do |t|
     t.integer  "StudentNumber"
     t.text     "ProjectTitle"
+    t.pdf      "document"
     t.text     "Reader1"
     t.text     "Reader2"
     t.text     "Reader3"

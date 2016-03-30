@@ -24,7 +24,7 @@
         <tr>
           <td><%= student.StudentNumber %></td>
           <td><%= student.ProjectTitle %></td>
-          <td><%= student.ProjectTitle %></td>        
+          <td><%= link_to 'PDF', root_path(student.document, :format => :pdf) %></td>
           <td><%= button_tag student.Reader1, class:"btn-xs btn-primary" %></td>
           <td><%= button_tag student.Reader2, class:"btn-xs btn-primary" %></td>
           <td><%= student.Reader3 %></td>
