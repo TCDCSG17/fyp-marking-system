@@ -25,8 +25,8 @@
           <td><%= student.StudentNumber %></td>
           <td><%= student.ProjectTitle %></td>
           <td><%= student.ProjectTitle %></td>        
-          <td><%= student.Reader1 %></td>
-          <td><%= student.Reader2 %></td>
+          <td><%= button_tag student.Reader1, class:"btn-xs btn-primary" %></td>
+          <td><%= button_tag student.Reader2, class:"btn-xs btn-primary" %></td>
           <td><%= student.Reader3 %></td>
           <td><%= link_to 'Edit', edit_student_path(student) %></td>
           <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
