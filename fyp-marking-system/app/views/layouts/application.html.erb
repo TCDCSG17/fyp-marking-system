@@ -7,13 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="nav">
+        <%= link_to "Home", root_path%>
+    </div>    
+
 
 <%= yield %>
 <footer class="footer">
       <div class="container">
-        <p class="text-muted">FYP Marking System  © 2016</p>
-        <%= link_to "Home", root_path%>
-        
+        <p class="text-muted">FYP Marking System  ©2016</p>        
       </div>
 </footer>
 </body>
