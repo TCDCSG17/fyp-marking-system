@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  StudentNumber: 1
+  ProjectTitle: MyText
+  Reader1: MyText
+  Reader2: MyText
+  Reader3: MyText
+
+two:
+  StudentNumber: 1
+  ProjectTitle: MyText
+  Reader1: MyText
+  Reader2: MyText
+  Reader3: MyText
