@@ -1,2 +1,0 @@
-class MarkController < ApplicationController
-end
