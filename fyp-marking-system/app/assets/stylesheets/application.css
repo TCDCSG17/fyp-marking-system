@@ -34,8 +34,12 @@ body{
 	padding: 0px 0px 40px 40px;
 }
 
-.container table th{
+.container table th, td{
 	padding-right: 15px;
+}
+
+.container table td{
+	padding-top: 5px;
 }
 
 .input-group-addon{
