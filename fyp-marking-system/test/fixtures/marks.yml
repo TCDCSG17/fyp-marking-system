@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  input1: MyText
+  input2: MyText
+  input3: MyText
+  weight1: 1
+  weight2: 1
+  weight3: 1
+  mark1: 1
+  mark2: 1
+  mark3: 1
+  final_mark: 1.5
+  student_id: 
+
+two:
+  input1: MyText
+  input2: MyText
+  input3: MyText
+  weight1: 1
+  weight2: 1
+  weight3: 1
+  mark1: 1
+  mark2: 1
+  mark3: 1
+  final_mark: 1.5
+  student_id: 

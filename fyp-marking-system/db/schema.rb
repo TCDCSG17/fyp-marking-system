@@ -11,10 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160330193820) do
+ActiveRecord::Schema.define(version: 20160330212018) do
 
   create_table "marks", force: :cascade do |t|
+    t.text     "input1"
+    t.text     "input2"
+    t.text     "input3"
+    t.integer  "weight1"
+    t.integer  "weight2"
+    t.integer  "weight3"
+    t.integer  "mark1"
+    t.integer  "mark2"
+    t.integer  "mark3"
+    t.float    "final_mark"
+    t.integer  "student_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
+
+  add_index "marks", ["student_id"], name: "index_marks_on_student_id"
 
   create_table "students", force: :cascade do |t|
     t.integer  "StudentNumber"
