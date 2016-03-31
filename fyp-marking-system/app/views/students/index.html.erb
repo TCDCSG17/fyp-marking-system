@@ -5,7 +5,8 @@
 </div>
 
 <div class="container">
-      <h3> <%= link_to 'Add Student', new_student_path, class:"btn btn-warning" %> </h3>
+      <h3> <%= link_to 'Add Student', new_student_path, class:"btn btn-warning center-block"%> </h3>
+      <br>
   <table>
     <thead>
       <tr>
@@ -24,12 +25,27 @@
         <tr>
           <td><%= student.StudentNumber %></td>
           <td><%= student.ProjectTitle %></td>
-          <td><%= link_to 'PDF', student_path(student.document, :format => :pdf) %></td>
-<!--           <td><%= button_tag student.Reader1, class:"btn-xs btn-primary" %></td> -->
-          <td><%= link_to 'Add Mark', new_mark_path, class:"btn btn-warning" %></td>
+          <% if student.document.exists? %>
+            <td><%= link_to 'PDF', student.document.url(:original, false), class:"btn-xs btn-primary" %></td>
+          <% else %>
+            <td><%= 'No PDF uploaded' %></td>
+          <% end %>
+          
+          <% if student.Reader1.empty?%>
+              <td><%= student.Reader3 %></td>
+          <% else %>
+          <td><%= button_tag student.Reader1, class:"btn-xs btn-primary" %></td>
+          <% end %>
+          <% if student.Reader2.empty?%>
+              <td><%= student.Reader3 %></td>
+          <% else %>
           <td><%= button_tag student.Reader2, class:"btn-xs btn-primary" %></td>
-          <td><%= student.Reader3 %></td>
-         
+          <% end %>
+          <% if student.Reader3.empty?%>
+              <td><%= student.Reader3 %></td>
+          <% else %>
+            <td><%= button_tag student.Reader3, class:"btn-xs btn-primary" %></td>
+          <% end %>
           <td><%= link_to 'Edit', edit_student_path(student), class:"btn-xs btn-success" %></td>
           <td><%= link_to 'Delete', student, class:"btn-xs btn-success", method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>

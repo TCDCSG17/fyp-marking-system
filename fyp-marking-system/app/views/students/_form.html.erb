@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label 'Student Number' %><br>
-    <%= f.number_field :StudentNumber %>
+    <%= f.number_field :StudentNumber, max:99999999 %>
   </div>
   <div class="field">
     <%= f.label 'Project Title' %><br>
@@ -36,6 +36,7 @@
     <%= f.text_area :Reader3 %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class:"btn-xs btn-success"%>
   </div>
+
 <% end %>
