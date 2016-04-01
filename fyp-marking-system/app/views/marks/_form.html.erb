@@ -17,8 +17,8 @@
     <%= f.text_area :input1, placeholder:"Comment", class:"form-control", size:"10x5"%>
   </div><br><br><br><br><br><br>
     <br>
-    <%= f.number_field :weight1, placeholder:"Weight" %>
-    <%= f.number_field :mark1, placeholder:"Mark"%>
+    <%= f.number_field :weight1, placeholder:"Weight",id:"weight1" %>
+    <%= f.number_field :mark1, placeholder:"Mark",id:"mark1"%>
   </div>
   <div class="field">
     <%= f.label 'Main' %><br>
@@ -26,8 +26,8 @@
     <%= f.text_area :input2 , placeholder:"Comment", class:"form-control", rows:"5"%>
   </div>
     <br><br><br><br><br><br><br>
-    <%= f.number_field :weight2, placeholder:"Weight" %>
-    <%= f.number_field :mark2, placeholder:"Mark"%>
+    <%= f.number_field :weight2, placeholder:"Weight",id:"weight2" %>
+    <%= f.number_field :mark2, placeholder:"Mark",id:"mark2" %>
   </div>
   <div class="field">
     <%= f.label 'Conclusion' %><br>
@@ -35,13 +35,27 @@
     <%= f.text_area :input3 , placeholder:"Comment", class:"form-control", size:"10x5"%>
   </div>
     <br><br><br><br><br><br><br>
-    <%= f.number_field :weight3 , placeholder:"Weight"%>
-    <%= f.number_field :mark3, placeholder:"Mark"%>
+    <%= f.number_field :weight3 , placeholder:"Weight",id:"weight3"%>
+    <%= f.number_field :mark3, placeholder:"Mark",id:"mark3"%>
   </div>
   <div class="actions">
     <%= f.submit class:"btn-xs btn-success"%>
   </div>
-
+  <%= f.text_area :final_mark , id:"out" %>
 <% end %>
 
-<!-- <%= link_to 'Back', students_path %> -->
+<script>
+  $("#mark1,#mark2,#mark3, #weight1,#weight2,#weight3")
+  .keyup(function() {
+    var mark1 = Number($( "#mark1").val());
+    var mark2 = Number($( "#mark2").val());
+    var mark3 = Number($( "#mark3").val());
+    var weight1 = Number($( "#weight1").val())/100;
+    var weight2 = Number($( "#weight2").val())/100;
+    var weight3 = Number($( "#weight3").val())/100;
+    var res = (mark1*weight1 + mark2*weight2 + mark3*weight3);
+    var finalRes = parseFloat(Math.round(res* 100) / 100).toFixed(2);
+    $("#out").text(finalRes +"%");
+  })
+  .keyup();
+</script>
