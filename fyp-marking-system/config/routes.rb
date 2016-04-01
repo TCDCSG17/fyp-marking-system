@@ -1,17 +1,21 @@
 Rails.application.routes.draw do
+
+
   resources :students do
     resources :marks
   end
-  get 'students/index'
-  get 'mark/new'
 
 resources :marks
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'students#index'
+
+  get 'students/:id/marks/new' => 'marks#new'
+  get 'students/:id/marks/:id' => 'marks#show'
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
