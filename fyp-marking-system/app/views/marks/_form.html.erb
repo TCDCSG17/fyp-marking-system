@@ -1,4 +1,4 @@
-<%= form_for @mark, html: {multipart: true} do |f| %>
+<%= form_for [:student, @mark], html: {multipart: true} do |f| %>
   <% if @mark.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@mark.errors.count, "error") %> prohibited this grading from being saved:</h2>
