@@ -5,7 +5,7 @@
 </div>
 
 <div class="container">
-      <h3> <%= link_to 'Add Student', new_student_path, class:"btn btn-warning"%> </h3>
+      <h3> <%= link_to 'Add Student', new_student_path,  style: "color:white", class:"btn btn-warning center-block"%> </h3>
 
       <br>
   <table>
@@ -48,9 +48,9 @@
             <td><%= button_tag student.Reader3, class:"btn-xs btn-info" %></td>
           <% end %>
 
-          <td><%= link_to 'Edit', edit_student_path(student), class:"btn-xs btn-success" %></td>
-          <td><%= link_to 'Show', student_path(student), class:"btn-xs btn-success" %></td>
-          <td><%= link_to 'Delete', student, class:"btn-xs btn-success", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Edit', edit_student_path(student), style: "color:white", class:"btn-xs btn-success" %></td>
+          <td><%= link_to 'Mark', student_path(student),  style: "color:white", class:"btn-xs btn-success" %></td>
+          <td><%= link_to 'Delete', student,  style: "color:white", class:"btn-xs btn-success", method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
         </tr>
       <% end %>

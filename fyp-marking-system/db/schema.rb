@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160331173528) do
+ActiveRecord::Schema.define(version: 20160330212018) do
 
   create_table "marks", force: :cascade do |t|
     t.text     "input1"
