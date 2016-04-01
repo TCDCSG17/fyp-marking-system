@@ -18,12 +18,12 @@
 <p>
   <strong>Reader 1</strong>
   <%= @student.Reader1 %>
-  <h3> <%= link_to 'Add Mark', new_student_mark_path(@student), class:"btn btn-warning"%> </h3>
+  <h3> <%= link_to 'Add Mark', new_student_mark_path(@student), style: "color:white" , class:"btn btn-warning"%> </h3>
 </p>
 
 <p>
   <strong>Reader 2</strong>
-  <%= @student.Reader2 %><h3> <%= link_to 'Add Mark', new_student_mark_path(@student), class:"btn btn-warning"%> </h3>
+  <%= @student.Reader2 %><h3> <%= link_to 'Add Mark', new_student_mark_path(@student), style: "color:white" , class:"btn btn-warning"%> </h3>
 </p>
 
 <% if !@student.Reader3.empty? %>
@@ -31,7 +31,7 @@
 
   <strong>Reader 3</strong>
   <%= @student.Reader3 %>
-  <h3> <%= link_to 'Add Mark', new_student_mark_path(@student), class:"btn btn-warning"%> </h3>
+  <h3> <%= link_to 'Add Mark', new_student_mark_path(@student), style: "color:white" , class:"btn btn-warning"%> </h3>
 </p>
 <% else %>
 <p></p>
