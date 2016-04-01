@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160330212018) do
+ActiveRecord::Schema.define(version: 20160331173528) do
 
   create_table "marks", force: :cascade do |t|
     t.text     "input1"
@@ -37,8 +37,12 @@ ActiveRecord::Schema.define(version: 20160330212018) do
     t.text     "Reader1"
     t.text     "Reader2"
     t.text     "Reader3"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "document_file_name"
+    t.string   "document_content_type"
+    t.integer  "document_file_size"
+    t.datetime "document_updated_at"
   end
 
 end
