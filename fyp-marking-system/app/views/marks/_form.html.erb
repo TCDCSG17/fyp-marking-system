@@ -13,21 +13,21 @@
 
   <div class="field">
     <%= f.label 'Introduction' %><br>
-    <%= f.text_area :input1 %>
-    <%= f.number_field :weight1 %>
-    <%= f.number_field :mark1 %>
+    <%= f.text_area :input1, placeholder:"comment"%>
+    <%= f.number_field :weight1, placeholder:"weight" %>
+    <%= f.number_field :mark1, placeholder:"mark" %>
   </div>
   <div class="field">
     <%= f.label 'Main' %><br>
-    <%= f.text_area :input2 %>
-    <%= f.number_field :weight2 %>
-    <%= f.number_field :mark2 %>
+    <%= f.text_area :input2 , placeholder:"comment"%>
+    <%= f.number_field :weight2, placeholder:"weight" %>
+    <%= f.number_field :mark2, placeholder:"mark" %>
   </div>
   <div class="field">
     <%= f.label 'Conclusion' %><br>
-    <%= f.text_area :input3 %>
-    <%= f.number_field :weight3 %>
-    <%= f.number_field :mark3 %>
+    <%= f.text_area :input3 , placeholder:"comment"%>
+    <%= f.number_field :weight3 , placeholder:"weight"%>
+    <%= f.number_field :mark3, placeholder:"mark" %>
   </div>
   <div class="actions">
     <%= f.submit class:"btn-xs btn-success"%>
