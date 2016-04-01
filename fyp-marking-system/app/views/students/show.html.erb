@@ -21,6 +21,12 @@
   <p> <%= link_to 'Add Mark', new_student_mark_path(@student), style: "color:white" , class:"btn-sm btn-warning"%> </p>
 </p>
 
+<% if @student.marks.find_by_id(1)%>
+  <br>
+  <%= @student.marks.find_by_id(1).final_mark %>
+  <br>
+<% end %>
+
 <p>
   <strong>Reader 2</strong>
   <%= @student.Reader2 %>

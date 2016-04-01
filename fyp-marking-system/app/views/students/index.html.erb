@@ -35,7 +35,12 @@
           <% if student.Reader1.empty?%>
               <td><%= student.Reader3 %></td>
           <% else %>
-          <td><%= button_tag student.Reader1, class:"btn-xs btn-primary" %></td>
+
+            <% if student.Reader1.empty?%>
+                <td><%= student.Reader3 %></td>
+            <% else %>
+                <td><%= button_tag student.Reader1, class:"btn-xs btn-primary" %></td>
+            <% end %>
           <% end %>
           <% if student.Reader2.empty?%>
               <td><%= student.Reader3 %></td>
