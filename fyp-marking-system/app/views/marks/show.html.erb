@@ -3,21 +3,21 @@
   <h1>Marks</h1>
 
   <p>
-  <strong>Willis</strong>
   <br>
-  <%= Mark.last.input1 %>
-  <%= Mark.last.weight1 %>
-  <%= Mark.last.mark1 %>
+  <h3>Introduction</h3><br>
+  <p>Comment: <%= @student.marks.first.input1 %></p>
+  <p>Weight: <%= @student.marks.first.weight1 %></p>
+  <p>Mark: <%= @student.marks.first.mark1%></p>
+  <h3>Main</h3><br>
+  <p>Comment: <%= @student.marks.first.input2 %></p>
+  <p>Weight: <%= @student.marks.first.weight2 %></p>
+  <p>Mark: <%= @student.marks.first.mark2%></p>
+  <h3>Conclusion</h3><br>
+  <p>Comment: <%= @student.marks.first.input3 %></p>
+  <p>Weight: <%= @student.marks.first.weight3 %></p>
+  <p>Mark: <%= @student.marks.first.mark3%></p>
   <br>
-  <%= Mark.last.input2 %>
-  <%= Mark.last.weight2 %>
-  <%= Mark.last.mark2 %>
-  <br>
-  <%= Mark.last.input3 %>
-  <%= Mark.last.weight3 %>
-  <%= Mark.last.mark3 %>
-  <br>
-  <%= Mark.last.final_mark %>
+   <p> Final Mark:<%= @student.marks.first.final_mark%></p>
 </p>
 
 <%= link_to 'Back', students_path, style: "color:white", class:"btn-xs btn-success" %>

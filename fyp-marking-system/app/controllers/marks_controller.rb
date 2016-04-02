@@ -29,6 +29,7 @@ class MarksController < ApplicationController
 	end
 
 	def show
+		@student = Student.find(params[:student_id])
 	end
 
 	private 

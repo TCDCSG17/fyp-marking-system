@@ -59,17 +59,17 @@
           <% if student.marks.first %>
           <td><%= student.marks.first.final_mark %></td>
           <%else%>
-          <td><p>Empty</p></td>
+          <td>None</td>
           <% end %>
 
           <% if student.marks.second%>
           <td><%= student.marks.second.final_mark %></td>
           <%else%>
-          <td>Empty</td>
+          <td>None</td>
           <% end %>
 
           <% if student.marks.third%>
-          <td><%= student.marks.first.final_mark %></td>
+          <td><%= student.marks.third.final_mark %></td>
           <%else%>
           <%if student.marks.first && student.marks.second  %>
 
@@ -79,7 +79,7 @@
           <td><%= button_tag "No third marker needed", class:"btn-xs btn-success" %></td>
           <%end%>
           <%else %>
-          <td>Empty</td>
+          <td>None</td>
           <% end %>
           <% end %>
           <%end %>
