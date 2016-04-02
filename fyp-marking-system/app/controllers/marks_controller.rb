@@ -13,14 +13,27 @@ class MarksController < ApplicationController
 
 	def new
     	@mark = Mark.new
-  end
+  	end
 
-  def show
-  end
+  	def update
 
-  private 
-    def set_mark
-      @mark = Mark.find(params[:id])
-    end
+		if @mark.update
+			redirect_to student_path(@student)
+		else
+			render 'edit'
+		end
+	end
+
+	def edit
+		@mark = Mark.find(params[:id])
+	end
+
+	def show
+	end
+
+	private 
+	def set_mark
+	    @mark = Mark.find(params[:id])
+	end
 
 end
