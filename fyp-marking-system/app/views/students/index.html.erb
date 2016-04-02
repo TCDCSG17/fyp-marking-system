@@ -17,6 +17,9 @@
         <th>Reader 1</th>
         <th>Reader 2</th>
         <th>Reader 3</th>
+        <th>Mark 1</th>
+        <th>Mark 2</th>
+        <th>Mark 3</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -52,7 +55,34 @@
           <% else %>
             <td><%= button_tag student.Reader3, class:"btn-xs btn-primary" %></td>
           <% end %>
+          <% if student.marks %>
+          <% if student.marks.first %>
+          <td><%= student.marks.first.final_mark %></td>
+          <%else%>
+          <td><p>Empty</p></td>
+          <% end %>
 
+          <% if student.marks.second%>
+          <td><%= student.marks.second.final_mark %></td>
+          <%else%>
+          <td>Empty</td>
+          <% end %>
+
+          <% if student.marks.third%>
+          <td><%= student.marks.first.final_mark %></td>
+          <%else%>
+          <%if student.marks.first && student.marks.second  %>
+
+          <%if student.marks.first.final_mark - student.marks.second.final_mark >= 10 %>
+          <td><%= button_tag "Third marker needed", class:"btn-xs btn-danger" %></td>
+          <%else %>
+          <td>No third marker needed</td>
+          <%end%>
+          <%else %>
+          <td>Empty</td>
+          <% end %>
+          <% end %>
+          <%end %>
           <td><%= link_to 'Edit', edit_student_path(student), style: "color:white", class:"btn-xs btn-success" %></td>
           <td><%= link_to 'Mark', student_path(student),  style: "color:white", class:"btn-xs btn-success" %></td>
           <td><%= link_to 'Delete', student,  style: "color:white", class:"btn-xs btn-success", method: :delete, data: { confirm: 'Are you sure?' } %></td>
