@@ -12,38 +12,41 @@
   <% end %>
 
   <div class="field">
-    <%= f.label 'Introduction' %><br>
-    <div class="col-xs-7">
-    <%= f.text_area :input1, placeholder:"Comment", class:"form-control", size:"10x5"%>
-  </div><br><br><br><br><br><br>
-    <br>
-    <%= f.number_field :weight1, placeholder:"Weight",id:"weight1" %>
-    <%= f.number_field :mark1, placeholder:"Mark",id:"mark1"%>
+    <%= f.label 'Introduction' %>
+    <div class="form" class="col-xs-5">
+      <%= f.text_area :input1, placeholder:"Comment", class:"form-control", size:"10x5"%>
+      <br>
+      <%= f.number_field :weight1, placeholder:"Weight",id:"weight1" %>
+      <%= f.number_field :mark1, placeholder:"Mark",id:"mark1"%>
+    </div>
   </div>
+
   <div class="field">
-    <%= f.label 'Main' %><br>
-    <div class="col-xs-7">
-    <%= f.text_area :input2 , placeholder:"Comment", class:"form-control", rows:"5"%>
+    <%= f.label 'Main' %>
+    <div class="form">
+      <%= f.text_area :input2 , placeholder:"Comment", class:"form-control", size:"10x5"%>
+      <br>
+      <%= f.number_field :weight2, placeholder:"Weight",id:"weight2" %>
+      <%= f.number_field :mark2, placeholder:"Mark",id:"mark2" %>
+    </div>
   </div>
-    <br><br><br><br><br><br><br>
-    <%= f.number_field :weight2, placeholder:"Weight",id:"weight2" %>
-    <%= f.number_field :mark2, placeholder:"Mark",id:"mark2" %>
-  </div>
+
   <div class="field">
-    <%= f.label 'Conclusion' %><br>
-    <div class="col-xs-7">
-    <%= f.text_area :input3 , placeholder:"Comment", class:"form-control", size:"10x5"%>
+    <%= f.label 'Conclusion' %>
+    <div class="form">
+      <%= f.text_area :input3 , placeholder:"Comment", class:"form-control", size:"10x5"%>
+      <br>
+      <%= f.number_field :weight3 , placeholder:"Weight",id:"weight3"%>
+      <%= f.number_field :mark3, placeholder:"Mark",id:"mark3"%>
+    </div>
   </div>
-    <br><br><br><br><br><br><br>
-    <%= f.number_field :weight3 , placeholder:"Weight",id:"weight3"%>
-    <%= f.number_field :mark3, placeholder:"Mark",id:"mark3"%>
-  </div>
+
   <div class="actions">
     <%= f.submit class:"btn-xs btn-success"%>
   </div>
  
-<p id="out"></p>
-<%= f.hidden_field :final_mark , id:"final_mark"%>
+  <p id="out"></p>
+  <%= f.hidden_field :final_mark , id:"final_mark"%>
 <% end %>
 
 <script>

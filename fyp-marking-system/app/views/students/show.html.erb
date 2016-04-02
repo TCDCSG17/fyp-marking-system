@@ -21,12 +21,6 @@
   <p> <%= link_to 'Add Mark', new_student_mark_path(@student), style: "color:white" , class:"btn-sm btn-warning"%> </p>
 </p>
 
-<% if @student.marks.find_by_id(1)%>
-  <br>
-  <%= @student.marks.find_by_id(1).final_mark %>
-  <br>
-<% end %>
-
 <p>
   <strong>Reader 2</strong>
   <%= @student.Reader2 %>
@@ -43,6 +37,6 @@
 <% else %>
 <p></p>
 <% end %>
-
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+<br>
+<%= link_to 'Edit', edit_student_path(@student), style: "color:white", class:"btn-xs btn-success" %> |
+<%= link_to 'Back', students_path, style: "color:white", class:"btn-xs btn-success" %>
