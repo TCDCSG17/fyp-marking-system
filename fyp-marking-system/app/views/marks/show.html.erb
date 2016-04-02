@@ -1,9 +1,10 @@
 <p id="notice"><%= notice %></p>
 
   <h1>Marks</h1>
-
+  <% if @student.marks.first %>
   <p>
   <br>
+  <h1>First mark</h1>
   <h3>Introduction</h3><br>
   <p>Comment: <%= @student.marks.first.input1 %></p>
   <p>Weight: <%= @student.marks.first.weight1 %></p>
@@ -19,5 +20,32 @@
   <br>
    <p> Final Mark:<%= @student.marks.first.final_mark%></p>
 </p>
+<%else%>
+<p>No marks yet</p>
+<%end%>
+
+
+<% if @student.marks.second %>
+  <p>
+  <br>
+  <h1>Second mark</h1>
+  <h3>Introduction</h3><br>
+  <p>Comment: <%= @student.marks.second.input1 %></p>
+  <p>Weight: <%= @student.marks.second.weight1 %></p>
+  <p>Mark: <%= @student.marks.second.mark1%></p>
+  <h3>Main</h3><br>
+  <p>Comment: <%= @student.marks.second.input2 %></p>
+  <p>Weight: <%= @student.marks.second.weight2 %></p>
+  <p>Mark: <%= @student.marks.second.mark2%></p>
+  <h3>Conclusion</h3><br>
+  <p>Comment: <%= @student.marks.second.input3 %></p>
+  <p>Weight: <%= @student.marks.second.weight3 %></p>
+  <p>Mark: <%= @student.marks.second.mark3%></p>
+  <br>
+   <p> Final Mark:<%= @student.marks.second.final_mark%></p>
+</p>
+<%else%>
+<p>No second mark yet</p>
+<%end%>
 
 <%= link_to 'Back', students_path, style: "color:white", class:"btn-xs btn-success" %>
