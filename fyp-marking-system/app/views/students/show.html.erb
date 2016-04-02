@@ -12,7 +12,11 @@
 
 <p>
   <strong>Project PDF</strong>
+  <% if @student.document.exists? %>
   <%= link_to 'PDF', @student.document.url(:original, false) %>
+  <%else%>
+  <%='No PDF Uploaded'%>
+  <%end%>
 </p>
 
 <p>
