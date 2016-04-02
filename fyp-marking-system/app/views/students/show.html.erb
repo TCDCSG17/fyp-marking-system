@@ -19,6 +19,12 @@
   <%end%>
 </p>
 
+
+<% if @student.marks.first && @student.marks.second && @student.marks.third %>
+<%= link_to 'View Marks', student_marks_path(@student), style: "color:white" , class:"btn-sm btn-warning"%> 
+<%end%>
+
+<% if !@student.marks.first || !@student.marks.second %>
 <p>
   <strong>Reader 1</strong>
   <%= @student.Reader1 %>
@@ -30,17 +36,20 @@
   <%= @student.Reader2 %>
   <p> <%= link_to 'Add Mark', new_student_mark_path(@student), style: "color:white" , class:"btn-sm btn-warning"%> </p>
 </p>
+<%end%>
 
-<% if !@student.Reader3.empty? %>
-<p>
+<% if @student.marks.first && @student.marks.second && !@student.marks.third && @student.Reader3.empty?%>
+<%= link_to 'View Marks', student_marks_path(@student), style: "color:white" , class:"btn-sm btn-warning"%> 
+<%end%>
 
-  <strong>Reader 3</strong>
+
+<% if @student.marks.first && @student.marks.second && !@student.marks.third && !@student.Reader3.empty?%>
+<%= link_to 'View Marks', student_marks_path(@student), style: "color:white" , class:"btn-sm btn-warning"%> 
+ <strong>Reader 3</strong>
   <%= @student.Reader3 %>
-  <p> <%= link_to 'Add Mark', new_student_mark_path(@student), style: "color:white" , class:"btn-sm btn-warning"%> </p>
-</p>
-<% else %>
-<p></p>
-<% end %>
-<br>
+  <p><%= link_to 'Add Third Mark', new_student_mark_path(@student), style: "color:white" , class:"btn-sm btn-warning"%></p>
+<%end%>
+
+<br><br>
 <%= link_to 'Edit', edit_student_path(@student), style: "color:white", class:"btn-xs btn-success" %> |
 <%= link_to 'Back', students_path, style: "color:white", class:"btn-xs btn-success" %>

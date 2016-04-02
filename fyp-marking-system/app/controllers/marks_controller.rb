@@ -31,7 +31,9 @@ class MarksController < ApplicationController
 	def show
 		@student = Student.find(params[:student_id])
 	end
-
+	def index
+		@student = Student.find(params[:student_id])
+	end
 	private 
 	def set_mark
 	    @mark = Mark.find(params[:id])
