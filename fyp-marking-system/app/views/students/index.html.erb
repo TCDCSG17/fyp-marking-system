@@ -73,10 +73,14 @@
           <%else%>
           <%if student.marks.first && student.marks.second  %>
 
-          <%if (student.marks.first.final_mark - student.marks.second.final_mark).abs >= 10 %>
+          <%if (student.marks.first.final_mark - student.marks.second.final_mark).abs >= 10 && student.Reader3.empty? %>
           <td><%= button_tag "Third marker needed", class:"btn-xs btn-danger" %></td>
           <%else %>
+          <%if (student.marks.first.final_mark - student.marks.second.final_mark).abs >= 10 && !student.Reader3.empty? %>
+          <td><%= button_tag "Third mark needed", class:"btn-xs btn-warning" %></td>
+          <%else%>
           <td><%= button_tag "No third marker needed", class:"btn-xs btn-success" %></td>
+          <%end%>
           <%end%>
           <%else %>
           <td>None</td>
